@@ -35,8 +35,23 @@ Add this line to your HTML `<head>`:
 ```html
 <link rel="stylesheet" href="minima.css">
 ```
+And that's it! Your HTML is now styled with Minima.
 
-And that's it, your HTML is now styled!
+### Using Themes
+
+Minima also has the option to implement themes. To use Minima themes, download `minima-base.css` and a theme CSS file from the themes/ folder. The theme CSS file contains variables setting the typefaces and colors used in the Minima.css styling. In the `minima-base.css` file, edit the top import statement to follow the path of your theme file: 
+
+```css
+@import url("path/to/minima-theme.css");
+```
+
+You can also copy the variables in the theme file and paste them into the `:root` selector at the top of the `minima-base.css` file. Once the theme is imported, include `minima-base.css` in your HTML:
+
+```html
+<link rel="stylesheet" type="text/css" href="path/to/minima-base.css">
+```
+
+You can also create your own themes by adapting the variables in the theme file to give Minima your unique typefaces and color palette. Feel free to contribute your themes to the project as well.
 
 ## Usage
 

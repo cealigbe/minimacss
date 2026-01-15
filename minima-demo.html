@@ -100,10 +100,40 @@
             <section id="getting-started" class="demo-section">
                 <h2>Getting Started</h2>
                 <p>Include Minima in your HTML and you're done:</p>
-                <pre><code>&lt;link rel="stylesheet" href="minima.css"&gt;</code></pre>
+
+                <h4>Via CDN</h4>
+                <pre><code>&lt;link rel="stylesheet" href="https://cdn.statically.io/gh/cealigbe/minimacss@main/minima.css"&gt;</code></pre>
+
+                <h4>Via Local File</h4>
+                <pre><code>&lt;link rel="stylesheet" href="path/to/minima.css"&gt;</code></pre>
                 <p>
                     That's it! Your HTML elements are now beautifully styled
                     with zero effort.
+                </p>
+
+                <h4>Using Themes</h4>
+                <p>
+                    Minima also has the option to implement themes. To use
+                    Minima themes, download <code>minima-base.css</code> and a
+                    theme CSS file from the themes/ folder. The theme CSS file
+                    contains variables setting the typefaces and colors used in
+                    the Minima.css styling. In the
+                    <code>minima-base.css</code> file, edit the top import
+                    statement to follow the path of your theme file:
+                </p>
+                <pre><code>@import url("path/to/minima-theme.css");</code></pre>
+                <p>
+                    You can also copy the variables in the theme file and paste
+                    them into the <code>:root</code> selector at the top of the
+                    <code>minima-base.css</code> file. Once the theme is
+                    imported, include <code>minima-base.css</code> in your HTML:
+                </p>
+                <pre><code>&lt;link rel="stylesheet" type="text/css" href="path/to/minima-base.css"&gt;</code></pre>
+                <p>
+                    You can also create your own themes by adapting the
+                    variables in the theme file to give Minima your unique
+                    typefaces and color palette. Feel free to contribute your
+                    themes to the project as well.
                 </p>
             </section>
 
@@ -114,30 +144,48 @@
                     customize and extend:
                 </p>
                 <div class="color-palette">
-                    <div class="color-swatch" style="background: #0099ff">
+                    <div
+                        class="color-swatch"
+                        style="background: var(--minima-primary)"
+                    >
                         <strong>Primary</strong>
                         <small>#0099ff</small>
                     </div>
-                    <div class="color-swatch" style="background: #204060">
+                    <div
+                        class="color-swatch"
+                        style="background: var(--minima-secondary)"
+                    >
                         <strong>Secondary</strong>
                         <small>#204060</small>
                     </div>
                     <div
                         class="color-swatch"
-                        style="background: #ffcc00; color: #333333"
+                        style="
+                            background: var(--minima-tertiary);
+                            color: var(--minima-contrast);
+                        "
                     >
                         <strong>Tertiary</strong>
                         <small>#ffcc00</small>
                     </div>
-                    <div class="color-swatch" style="background: #333333">
+                    <div
+                        class="color-swatch"
+                        style="background: var(--minima-contrast)"
+                    >
                         <strong>Contrast</strong>
                         <small>#333333</small>
                     </div>
-                    <div class="color-swatch" style="background: #cc3333">
+                    <div
+                        class="color-swatch"
+                        style="background: var(--minima-error)"
+                    >
                         <strong>Error</strong>
                         <small>#cc3333</small>
                     </div>
-                    <div class="color-swatch" style="background: #66cc33">
+                    <div
+                        class="color-swatch"
+                        style="background: var(--minima-success)"
+                    >
                         <strong>Success</strong>
                         <small>#66cc33</small>
                     </div>

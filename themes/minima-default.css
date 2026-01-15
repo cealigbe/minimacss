@@ -1,0 +1,46 @@
+/* 1. Google Fonts Import (Inter and Space Mono) */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+/* 2. CSS Variables */
+:root {
+    /* Typeface */
+    --minima-font-family:
+        "Inter", system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol";
+    --minima-mono-family: "Space Mono", ui-monospace, monospace;
+
+    /* Colors */
+    --minima-surface: #f6f6f6; /* Background for body and default inputs */
+    --minima-surface-alt: #d0d0d6; /* Alternate background color */
+    --minima-body-text: #202020; /* Body text color */
+    --minima-primary: #0099ff; /* Buttons, links, primary input states */
+    --minima-secondary: #204060; /* Input elements with class "secondary" */
+    --minima-tertiary: #ffcc00; /* Tertiary color */
+    --minima-contrast: #333333; /* Default input borders, headings */
+    --minima-contrast-alt: #999999; /* Light contrast color */
+    --minima-accent: #ff0099; /* Defined but not explicitly used in minimal setup */
+    --minima-error: #cc3333; /* Error states for form elements */
+    --minima-success: #66cc33; /* Success color for toasts */
+    --minima-disabled-color: #565656; /* Color for disabled input elements */
+
+    /* Calculated Darkened Colors */
+    --minima-surface-darken-20: hsl(
+        from var(--minima-surface) h s 77%
+    ); /* #f6f6f6 darkened by 20% */
+    --minima-primary-darken-20: hsl(
+        from var(--minima-primary) h s 40%
+    ); /* #0099ff darkened by 20% */
+    --minima-success-darken-40: hsl(
+        from var(--minima-success) h s 30%
+    ); /* #66cc33 darkened by 40% */
+    --minima-error-darken-40: hsl(
+        from var(--minima-error) h s 30%
+    ); /* #cc3333 darkened by 40% */
+
+    /* Calculated Lightened Colors */
+    --minima-primary-lighten-80: hsl(from var(--minima-primary) h s 90%);
+    --minima-success-lighten-40: hsl(from var(--minima-success) h s 70%);
+    --minima-error-lighten-40: hsl(from var(--minima-error) h s 70%);
+}

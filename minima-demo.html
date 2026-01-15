@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Minima.css - A Minimal Semantic CSS Framework</title>
+
+        <meta
+            name="description"
+            content="A demo page illustrating how to use Minima.css, a minimal semantic CSS framework"
+        />
+        <meta
+            name="keywords"
+            content="minima, minima.css, minimacss, minima framework, css, css framework, semantic, semantic HTML, semantic CSS, minimal CSS"
+        />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:url" content="minimacss.dezain.io" />
+        <meta property="og:site_name" content="Minima.css" />
+        <meta property="og:image:type" content="image/png" />
+        <meta
+            property="og:image"
+            content="http://minimacss.dezain.io/minima-css@2x.png"
+        />
+
+        <link rel="stylesheet" href="minima.css" />
+        <link rel="icon" href="minima-icon.png" />
+
+        <style>
+            .demo-section {
+                margin-block: 3rem;
+            }
+
+            .color-palette {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 2px;
+                margin-block: 1rem;
+            }
+
+            .color-swatch {
+                text-align: center;
+                padding: 2rem 1rem;
+                color: white;
+            }
+
+            .color-swatch small {
+                display: block;
+                margin-top: 0.5rem;
+                font-family: var(--minima-mono-family);
+                font-size: 0.8rem;
+            }
+
+            .demo-grid > .col {
+                background-color: var(--minima-surface-alt);
+                padding: var(--minima-sp-reg);
+                border-radius: var(--minima-border-radius);
+            }
+
+            .invisible {
+                visibility: hidden;
+                width: 0;
+                height: 0;
+                opacity: 0;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1 class="invisible">Minima.css</h1>
+                <img src="minimacss-banner@2x.png" alt="Minima.css banner" />
+                <br />
+                <p>
+                    <strong
+                        >A minimal, semantic, classless CSS framework, inspired
+                        by Pico.css, for quick and beautiful webpage
+                        styling.</strong
+                    >
+                </p>
+                <p>
+                    One CSS file and your semantic HTML is instantly elevated
+                    with modern design and best UI design practices. No classes,
+                    no configuration, no hassle.
+                </p>
+                <nav>
+                    <menu>
+                        <li>
+                            <a href="https://github.com/cealigbe/minimacss"
+                                >GitHub</a
+                            >
+                        </li>
+                        <li><a href="#getting-started">Get Started</a></li>
+                        <li><a href="#examples">Examples</a></li>
+                    </menu>
+                </nav>
+            </header>
+
+            <section id="getting-started" class="demo-section">
+                <h2>Getting Started</h2>
+                <p>Include Minima in your HTML and you're done:</p>
+                <pre><code>&lt;link rel="stylesheet" href="minima.css"&gt;</code></pre>
+                <p>
+                    That's it! Your HTML elements are now beautifully styled
+                    with zero effort.
+                </p>
+            </section>
+
+            <section id="colors" class="demo-section">
+                <h2>Color Palette</h2>
+                <p>
+                    Minima uses a clean, modern color scheme that's easy to
+                    customize and extend:
+                </p>
+                <div class="color-palette">
+                    <div class="color-swatch" style="background: #0099ff">
+                        <strong>Primary</strong>
+                        <small>#0099ff</small>
+                    </div>
+                    <div class="color-swatch" style="background: #204060">
+                        <strong>Secondary</strong>
+                        <small>#204060</small>
+                    </div>
+                    <div
+                        class="color-swatch"
+                        style="background: #ffcc00; color: #333333"
+                    >
+                        <strong>Tertiary</strong>
+                        <small>#ffcc00</small>
+                    </div>
+                    <div class="color-swatch" style="background: #333333">
+                        <strong>Contrast</strong>
+                        <small>#333333</small>
+                    </div>
+                    <div class="color-swatch" style="background: #cc3333">
+                        <strong>Error</strong>
+                        <small>#cc3333</small>
+                    </div>
+                    <div class="color-swatch" style="background: #66cc33">
+                        <strong>Success</strong>
+                        <small>#66cc33</small>
+                    </div>
+                </div>
+            </section>
+
+            <section id="examples" class="demo-section">
+                <h2>Typography</h2>
+                <p>
+                    Minima has a harmonious type scale with optimal line heights
+                    and clear spacing.
+                </p>
+
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+
+                <p>
+                    This is a paragraph. It has text with
+                    <strong>bold text</strong>, <em>italic text</em>, and
+                    <a href="#">links that look great</a>. You can also use
+                    <code>inline code</code> and &emsp;<kbd>Cmd</kbd> +
+                    <kbd>K</kbd>&emsp; keyboard shortcuts, with great styling.
+                </p>
+
+                <blockquote>
+                    <p>
+                        Blockquotes are styled with a left border. Perfect for
+                        pulling out and highlighting quotes or important
+                        information.
+                    </p>
+                </blockquote>
+
+                <p>Minima also has great styling for advance text elements:</p>
+                <ul>
+                    <li><mark>Highlighted text</mark> stands out</li>
+                    <li><del>Deleted text</del> shows removals</li>
+                    <li><ins>Inserted text</ins> shows additions</li>
+                    <li>
+                        <abbr title="HyperText Markup Language">HTML</abbr> with
+                        abbreviations
+                    </li>
+                </ul>
+            </section>
+
+            <section class="demo-section">
+                <h2>Lists</h2>
+
+                <h3>Unordered List</h3>
+                <ul>
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>
+                        Third item with nested list:
+                        <ul>
+                            <li>Nested item 1</li>
+                            <li>Nested item 2</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Ordered List</h3>
+                <ol>
+                    <li>First step</li>
+                    <li>Second step</li>
+                    <li>Third step</li>
+                </ol>
+
+                <h3>Definition List</h3>
+                <dl>
+                    <dt>Classless CSS</dt>
+                    <dd>
+                        A CSS framework that styles semantic HTML without
+                        requiring classes.
+                    </dd>
+
+                    <dt>Semantic HTML</dt>
+                    <dd>
+                        HTML that uses tags that convey meaning and structure to
+                        browsers, screen readers, and end users.
+                    </dd>
+                </dl>
+            </section>
+
+            <section class="demo-section">
+                <h2>Images</h2>
+                <p>
+                    Images and figures have minimal styling to make them
+                    elevated and responsive.
+                </p>
+
+                <figure>
+                    <img
+                        class="responsive-center"
+                        src="http://static.photos/blurred/640x360"
+                        alt="blurred image"
+                    />
+                    <figcaption class="text-center">
+                        This is a figure with an image.
+                    </figcaption>
+                </figure>
+                <div class="two-cols">
+                    <img
+                        src="http://static.photos/nature/640x360"
+                        alt="nature image"
+                    />
+                    <img
+                        src="http://static.photos/nature/640x360"
+                        alt="nature image"
+                    />
+                </div>
+            </section>
+
+            <section class="demo-section">
+                <h2>Buttons</h2>
+                <p>Multiple button styles with minimal markup:</p>
+
+                <button>Primary Button</button>
+                <button class="secondary">Secondary Button</button>
+                <button class="contrast">Contrast Button</button>
+                <button class="outline">Outline Button</button>
+                <button disabled>Disabled Button</button>
+            </section>
+
+            <section class="demo-section">
+                <h2>Forms</h2>
+                <p>
+                    All form elements are automatically styled with proper focus
+                    states and validation:
+                </p>
+
+                <form>
+                    <fieldset>
+                        <legend>Login Form</legend>
+
+                        <label for="input--email" class="required">Email</label>
+                        <input
+                            type="email"
+                            id="input--email"
+                            placeholder="you@example.com"
+                            required
+                        />
+
+                        <label for="input--password" class="required"
+                            >Password</label
+                        >
+                        <input
+                            type="password"
+                            id="input--password"
+                            placeholder="you@example.com"
+                            required
+                        />
+
+                        <label>
+                            <input type="checkbox" />
+                            Remember me
+                        </label>
+
+                        <button type="submit">Sign In</button>
+                    </fieldset>
+                </form>
+
+                <h3>Input Types</h3>
+                <form>
+                    <label for="input--text">Text Input</label>
+                    <input
+                        type="text"
+                        id="input--text"
+                        placeholder="Enter text"
+                    />
+
+                    <label for="input--search">Search</label>
+                    <input
+                        type="search"
+                        id="input--search"
+                        placeholder="Search..."
+                    />
+
+                    <label for="input--number">Number Input</label>
+                    <input type="number" id="input--number" placeholder="42" />
+
+                    <label for="input--date">Date Input</label>
+                    <input type="date" id="input--date" />
+
+                    <label for="input--time">Time Input</label>
+                    <input type="time" id="input--time" />
+
+                    <label for="input--color">Color Picker</label>
+                    <input type="color" id="input--color" value="#0099ff" />
+
+                    <label for="input--range">Range Slider</label>
+                    <input
+                        type="range"
+                        id="input--range"
+                        min="0"
+                        max="100"
+                        value="50"
+                    />
+
+                    <label for="input--file">File Upload</label>
+                    <input type="file" id="input--file" />
+
+                    <label for="select--dropdown">Select Dropdown</label>
+                    <select id="select--dropdown">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                    </select>
+
+                    <label for="text--area">Textarea</label>
+                    <textarea
+                        rows="4"
+                        id="text--area"
+                        placeholder="Enter your message..."
+                    ></textarea>
+                </form>
+
+                <h3>Radio Buttons & Checkboxes</h3>
+                <fieldset>
+                    <legend>Choose your preference</legend>
+                    <label>
+                        <input type="radio" name="preference" checked />
+                        Option A
+                    </label>
+                    <label>
+                        <input type="radio" name="preference" />
+                        Option B
+                    </label>
+                    <label>
+                        <input type="radio" name="preference" />
+                        Option C
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Check all that apply</legend>
+                    <label>
+                        <input type="checkbox" name="preference" checked />
+                        Item A
+                    </label>
+                    <label>
+                        <input type="checkbox" name="preference" />
+                        Item B
+                    </label>
+                    <label>
+                        <input type="checkbox" name="preference" />
+                        Item C
+                    </label>
+                </fieldset>
+
+                <h3>Switch Toggle</h3>
+                <label>
+                    <input type="checkbox" role="switch" />
+                    Enable notifications
+                </label>
+                <label>
+                    <input type="checkbox" role="switch" checked />
+                    Dark mode
+                </label>
+            </section>
+
+            <section class="demo-section">
+                <h2>Tables</h2>
+                <p>
+                    Clean tables with alternating rows, no extra markup needed:
+                </p>
+
+                <table>
+                    <caption>
+                        Sample Data Table
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alice Johnson</td>
+                            <td>alice@example.com</td>
+                            <td>Developer</td>
+                        </tr>
+                        <tr>
+                            <td>Bob Smith</td>
+                            <td>bob@example.com</td>
+                            <td>Designer</td>
+                        </tr>
+                        <tr>
+                            <td>Carol Williams</td>
+                            <td>carol@example.com</td>
+                            <td>Manager</td>
+                        </tr>
+                        <tr>
+                            <td>David Brown</td>
+                            <td>david@example.com</td>
+                            <td>Developer</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="demo-section">
+                <h2>Interactive Elements</h2>
+
+                <h3>Details & Summary</h3>
+                <details>
+                    <summary>Click to expand</summary>
+                    <p>
+                        This content is hidden by default and can be toggled
+                        open and closed. Perfect for FAQs, accordions, or hiding
+                        supplementary information.
+                    </p>
+                </details>
+
+                <details open>
+                    <summary>Already expanded</summary>
+                    <p>
+                        This one starts open. The icons change to reflect the
+                        open or closed state.
+                    </p>
+                </details>
+
+                <h3>Progress Bars</h3>
+                <label> Loading progress: </label>
+                <progress value="70" max="100"></progress>
+
+                <label> Indeterminate progress: </label>
+                <progress></progress>
+
+                <h3>Meter</h3>
+                <label>
+                    Disk usage (<output style="font-weight: bold">70%</output>):
+                </label>
+                <meter value="0.7" min="0" max="1"></meter>
+            </section>
+
+            <section class="demo-section">
+                <h2>Code Blocks</h2>
+                <p>Code examples are styled with monospace fonts:</p>
+                <pre><code>function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+console.log(greet('World'));</code></pre>
+            </section>
+
+            <section class="demo-section">
+                <h2>Dialog</h2>
+                <p>Modern dialog elements with backdrop blur:</p>
+                <button
+                    onclick="document.getElementById('demo-dialog').showModal()"
+                >
+                    Open Dialog
+                </button>
+            </section>
+
+            <section class="demo-section">
+                <h2>Layout Utilities</h2>
+                <p>Optional utility classes for common layouts:</p>
+
+                <h3>Grid Columns</h3>
+                <div class="three-cols demo-grid">
+                    <div class="col">Column 1</div>
+                    <div class="col">Column 2</div>
+                    <div class="col">Column 3</div>
+                </div>
+            </section>
+
+            <section class="demo-section">
+                <h2>Aside Elements</h2>
+                <article>
+                    <h3>Article with Aside</h3>
+                    <p>
+                        Articles can contain aside elements that are
+                        automatically styled with a distinct background:
+                    </p>
+
+                    <aside>
+                        <strong>Note:</strong> This is an aside element. It's
+                        perfect for tangential information, tips, or warnings.
+                    </aside>
+                    <p>
+                        The main content continues after the aside with proper
+                        spacing. Minima also has layout classes to place the
+                        aside to the left or right of the main content.
+                    </p>
+                </article>
+            </section>
+
+            <footer>
+                <hr />
+                <p class="text-center">
+                    <strong>Minima.css</strong> by
+                    <a href="https://dezain.io">Chuck Aligbe</a><br />
+                    <a href="https://github.com/cealigbe/minimacss"
+                        >View on GitHub</a
+                    >
+                </p>
+            </footer>
+        </main>
+
+        <dialog id="demo-dialog">
+            <article>
+                <header>
+                    <h3>Dialog Title</h3>
+                </header>
+                <p>
+                    This is a modal dialog with a blurred backdrop. Dialogs are
+                    perfect for confirmations, forms, or important messages.
+                </p>
+                <p>Press ESC or click the button below to close.</p>
+                <footer>
+                    <button
+                        class="outline"
+                        onclick="document.getElementById('demo-dialog').close()"
+                    >
+                        Cancel
+                    </button>
+                    <button
+                        onclick="document.getElementById('demo-dialog').close()"
+                    >
+                        Confirm
+                    </button>
+                </footer>
+            </article>
+        </dialog>
+    </body>
+</html>

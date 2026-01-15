@@ -1,6 +1,6 @@
 # Minima.css
 
-![Minima.css](minima-css@2x.png)
+![Minima.css](minimacss-banner@2x.png)
 
 A minimal, semantic, classless CSS framework for quick and easy webpage styling. Write straight HTML and get a rich, modern design.
 

@@ -23,7 +23,7 @@ Minima is a classless CSS framework that automatically styles semantically writt
 Add this line to your HTML `<head>`:
 
 ```html
-<link rel="stylesheet" href="path/to/minima.css">
+<link rel="stylesheet" href="https://cdn.statically.io/gh/cealigbe/minimacss@main/minima.css">
 ```
 
 ### Local Installation

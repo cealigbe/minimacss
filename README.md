@@ -16,6 +16,8 @@ Minima is a classless CSS framework that automatically styles semantically writt
 - **Modern** - Clean design out of the box
 - **Customizable** - CSS variables make it easy to extend
 
+Check out the [Minima.css](minimacss.dezain.io) demo page to see how the framework looks.
+
 ## Quick Start
 
 ### CDN (fastest)

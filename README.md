@@ -365,4 +365,4 @@ Found a bug or have a suggestion? Feel free to open an issue or submit a pull re
 
 ---
 
-**Made for developers who love semantic HTML**
+**Made by a designer-developer, for designer-developers who love semantic HTML**

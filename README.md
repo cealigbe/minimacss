@@ -374,6 +374,7 @@ Minima is inspired by [Pico.css](https://picocss.com/) and other classless CSS f
 This project is distributed under the MIT License, see [LICENSE](https://github.com/cealigbe/minimacss/blob/main/LICENSE) for more info.
 
 By Chuck Aligbe | [dezain.io](https://dezain.io)
+
 [github.com/cealigbe/minimacss](https://github.com/cealigbe/minimacss)
 
 ## Contributing

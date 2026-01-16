@@ -1,7 +1,8 @@
-/* 1. Google Fonts Import (Inter and Space Mono) */
+/* 1. XZ Fonts Import (Inter and JetBrains Mono) */
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/inter.min.css");
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/jetbrains-mono.min.css");
+
 
 /* 2. CSS Variables */
 :root {
@@ -9,7 +10,7 @@
     --minima-font-family:
         "Inter", system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
         "Segoe UI Symbol";
-    --minima-mono-family: "Space Mono", ui-monospace, monospace;
+    --minima-mono-family: "JetBrains Mono", ui-monospace, monospace;
 
     /* Colors */
     --minima-surface: #f6f6f6; /* Background for body and default inputs */

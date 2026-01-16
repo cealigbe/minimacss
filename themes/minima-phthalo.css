@@ -1,7 +1,7 @@
-/* 1. Google Fonts Import (Inter and Space Mono) */
+/* 1. XZ Fonts Import (Inter and JetBrains Mono) */
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/inter.min.css");
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/jetbrains-mono.min.css");
 
 /* 2. CSS Variables */
 :root {
@@ -9,7 +9,7 @@
     --minima-font-family:
         "Inter", system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
         "Segoe UI Symbol";
-    --minima-mono-family: "Space Mono", ui-monospace, monospace;
+    --minima-mono-family: "JetBrains Mono", ui-monospace, monospace;
 
     /* Colors */
     --minima-surface: #f6f6f6; /* Background for body and default inputs */
@@ -26,18 +26,10 @@
     --minima-disabled-color: #565656; /* Color for disabled input elements */
 
     /* Calculated Darkened Colors */
-    --minima-surface-darken-20: hsl(
-        from var(--minima-surface) h s 77%
-    ); /* #f6f6f6 darkened by 20% */
-    --minima-primary-darken-20: hsl(
-        from var(--minima-primary) h s 40%
-    ); /* #0099ff darkened by 20% */
-    --minima-success-darken-40: hsl(
-        from var(--minima-success) h s 30%
-    ); /* #66cc33 darkened by 40% */
-    --minima-error-darken-40: hsl(
-        from var(--minima-error) h s 30%
-    ); /* #cc3333 darkened by 40% */
+    --minima-surface-darken-20: hsl(from var(--minima-surface) h s 77%);
+    --minima-primary-darken-20: hsl(from var(--minima-primary) h s 40%);
+    --minima-success-darken-40: hsl(from var(--minima-success) h s 30%);
+    --minima-error-darken-40: hsl(from var(--minima-error) h s 30%);
 
     /* Calculated Lightened Colors */
     --minima-primary-lighten-80: hsl(from var(--minima-primary) h s 90%);

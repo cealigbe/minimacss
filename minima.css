@@ -55,6 +55,10 @@
     --minima-success-lighten-40: hsl(from var(--minima-success) h s 70%);
     --minima-error-lighten-40: hsl(from var(--minima-error) h s 70%);
 
+    /* Contrast Color Function */
+    --contrast-threshold: 60;
+    --l: clamp(0, calc((l - var(--contrast-threshold)) * -100), 100);
+
     /* Dimensions */
     --minima-border-radius: 4px;
     --minima-border-thickness: 2px;
@@ -578,7 +582,7 @@ input[type="file"]::file-selector-button {
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    background-color: #eeeeee;
+    background-color: hsl(from var(--minima-surface) h s 100);
     border-radius: var(--minima-border-radius);
     border: solid var(--minima-border-thickness) var(--minima-contrast);
     transition:
@@ -620,7 +624,7 @@ input[type="color"] {
 
 input[type="color"]:hover,
 input[type="color"]:focus {
-    background-color: #dddddd;
+    background-color: var(--minima-surface-alt);
 }
 
 input[type="color"]::-webkit-color-swatch-wrapper {
@@ -643,7 +647,7 @@ input[type="range"] {
     width: 100%;
     height: 4px;
     border-radius: 4px;
-    background-color: #333;
+    background-color: var(--minima-contrast);
     padding: 0;
     vertical-align: middle;
     margin: 1rem 0;
@@ -654,7 +658,7 @@ input[type="range"] {
 input[type="range"]:hover,
 input[type="range"]:focus {
     opacity: 1;
-    background-color: #333;
+    background-color: var(--minima-contrast);
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -706,7 +710,7 @@ input[type="radio"] {
     margin-top: -0.2em;
     margin-inline-end: 0.5em;
     accent-color: var(--minima-primary);
-    border: 0.125em solid #bbbbbb;
+    border: 0.125em solid var(--minima-contrast-alt);
     vertical-align: middle;
     cursor: pointer;
     transition:
@@ -731,7 +735,7 @@ input[type="radio"] {
 input[type="checkbox"]:checked {
     border-color: var(--minima-primary);
     background-color: var(--minima-primary);
-    color: white;
+    color: hsl(from var(--minima-surface) h s calc(100 - var(--l)));
 
     background-image: var(--minima-icon-check);
     background-repeat: no-repeat;
@@ -742,7 +746,7 @@ input[type="checkbox"]:checked {
 input[type="radio"]:checked {
     border-color: var(--minima-primary);
     background-color: var(--minima-primary);
-    color: white;
+    color: hsl(from var(--minima-surface) h s calc(100 - var(--l)));
 
     background-image: var(--minima-icon-circle);
     background-repeat: no-repeat;
@@ -756,8 +760,8 @@ input[type="radio"]:checked {
 }
 
 :is(input[type="checkbox"], input[type="radio"]):disabled {
-    background-color: #eeeeee; /* Light gray background for disabled */
-    border-color: #cccccc;
+    background-color: hsl(from var(--minima-surface) h s 80%); /* Light gray background for disabled */
+    border-color: hsl(0 0 60);
     color: var(--minima-disabled-color); /* Color for disabled text/content */
     cursor: not-allowed;
     opacity: 0.7;
@@ -771,7 +775,7 @@ input[type="checkbox"][role="switch"] {
     border: none;
     border-radius: 1.25em;
     background: none;
-    background-color: #bbbbbb;
+    background-color: hsl(from var(--minima-surface) h s 60%);
     line-height: 1.25em;
 }
 
@@ -801,7 +805,8 @@ input[type="checkbox"][role="switch"]:checked::before {
 
 input[type="checkbox"].switch:disabled,
 input[type="checkbox"][role="switch"]:disabled {
-    background-color: #cccccc;
+    background-color: hsl(0 0 60);
+    opacity: 0.5;
 }
 
 label {
@@ -824,6 +829,8 @@ label:has([type="checkbox"], [type="radio"]) {
 
 label:has([type="checkbox"]:disabled, [type="radio"]:disabled) {
     cursor: not-allowed;
+    color: var(--minima-disabled-color);
+    opacity: 0.8;
 }
 
 fieldset {
@@ -877,7 +884,7 @@ input[type="submit"],
 input[type="button"],
 input[type="reset"] {
     background-color: var(--minima-primary); /* Primary color background */
-    color: white; /* Contrasting text for primary button */
+    color: hsl(from var(--minima-primary) 0 0 var(--l)); /* Contrasting text for primary button */
     border: none;
     border-radius: var(--minima-border-radius);
 }
@@ -903,8 +910,7 @@ input[type="reset"]:focus {
     input[type="reset"]
 ).secondary {
     background-color: var(--minima-secondary);
-    color: white;
-    border-radius: var(--minima-border-radius);
+    color: hsl(from var(--minima-secondary) 0 0 var(--l));
 }
 
 /* Contrast Buttons */
@@ -916,8 +922,7 @@ input[type="reset"]:focus {
     input[type="reset"]
 ).contrast {
     background-color: var(--minima-contrast);
-    color: white;
-    border-radius: var(--minima-border-radius);
+    color: hsl(from var(--minima-contrast) 0 0 var(--l));
 }
 
 /* Outlined Button */
@@ -949,7 +954,7 @@ input[type="reset"]:focus {
 input:disabled,
 select:disabled,
 textarea:disabled {
-    background-color: #e0e0e0; /* Light gray background for disabled */
+    background-color: hsl(0 0 60); /* Light gray background for disabled */
     border-color: var(--minima-disabled-color);
     color: var(--minima-disabled-color); /* Color for disabled text/content */
     cursor: not-allowed;
@@ -962,7 +967,7 @@ textarea:disabled {
     input[type="button"],
     input[type="reset"]
 ):disabled {
-    background-color: #e0e0e0; /* Light gray background for disabled */
+    background-color: hsl(0 0 60); /* Light gray background for disabled */
     border-color: var(--minima-disabled-color);
     color: var(--minima-disabled-color); /* Color for disabled text/content */
     cursor: not-allowed;
